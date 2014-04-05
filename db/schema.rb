@@ -51,15 +51,4 @@ ActiveRecord::Schema.define(version: 20140405112150) do
 
   add_index "users", ["state"], name: "index_users_on_state"
 
-  create_table "usuarios", force: true do |t|
-    t.string   "pass"
-    t.string   "direccion"
-    t.integer  "puntos"
-    t.string   "mail"
-    t.integer  "movil"
-    t.string   "nombre"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
 end

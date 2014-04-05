@@ -4,6 +4,11 @@ donatulibro
 Proyecto para HackForGood2014 U. Deusto
 
 
+http://torrent.ihuerta.net:3000
+
+https://www.youtube.com/watch?v=AvEaJsKg_og
+
+
 Instalar / Montar entorno de trabajo
 ====================================
 

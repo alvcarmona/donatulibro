@@ -46,7 +46,7 @@
 <def tag="main-nav">
   <navigation class="main-nav" merge-attrs param="default">
     <nav-item with="&Libro">Catálogo</nav-item>
-    <nav-item href="/users/#{current_user.id}">Mi cuenta</nav-item>
+    <nav-item if="&current_user.signed_up?" href="/users/#{current_user.id}">Mi cuenta</nav-item>
     <nav-item href="/ayuda">Ayuda</nav-item>
   </navigation>
 </def>
