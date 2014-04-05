@@ -27,9 +27,12 @@
 
     <account-nav:>
       <search: replace>
+      
        
       </search:>
-      <account: replace/>
+      <account: replace>
+ <li class="nav-item"> <a>5 puntos</a> </li>
+</account:>
       <sign-up: replace/>
     </account-nav:>
     <footer:>
