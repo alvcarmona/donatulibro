@@ -31,7 +31,7 @@
        
       </search:>
       <account: replace>
- <li class="nav-item"> <a>5 puntos</a> </li>
+ <li class="nav-item"> <a><%= current_user.puntos %> puntos</a> </li>
 </account:>
       <sign-up: replace/>
     </account-nav:>
@@ -46,7 +46,7 @@
 <def tag="main-nav">
   <navigation class="main-nav" merge-attrs param="default">
     <nav-item with="&Libro">Catálogo</nav-item>
-    <nav-item with="&Usuario">Mi cuenta</nav-item>
+    <nav-item href="/users/#{current_user.id}">Mi cuenta</nav-item>
     <nav-item href="/ayuda">Ayuda</nav-item>
   </navigation>
 </def>

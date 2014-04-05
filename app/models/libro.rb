@@ -11,9 +11,8 @@ class Libro < ActiveRecord::Base
     descripcion :string
     timestamps
   end
-  
-  belongs_to :user
-  belongs_to :reservador, :class_name => "User" , :creator => true
+  belongs_to :user , :creator => true
+  belongs_to :reservador, :class_name => "User"
  										
   attr_accessible :autor, :editorial, :titulo, :curso, :edicion, :descripcion
 before_create :puntos_para_usuario
@@ -27,13 +26,17 @@ before_create :puntos_para_usuario
     state :disponible, :default => true
     state :solicitado, :entregado, :recibido
 
-    transition :solicitar, { :disponible => :solicitado}, :available_to => :all
+    transition :solicitar, { :disponible => :solicitado}, :available_to => :all do
+      self.update_attribute(:reservador, acting_user)
+    end
 
+    transition :enviar, {:solicitado => :entregado}, :available_to => :user do
+      reservador.update_attribute(:puntos, reservador.puntos - 3)
+    end
 
-    transition :enviar, {:solicitado => :entregado}, :available_to => :all
-
-
-    transition :confirmar, { :entregado=> :recibido}, :available_to => :all
+    transition :confirmar, { :entregado=> :recibido}, :available_to => :reservador do
+      user.update_attribute(:puntos, user.puntos + 3)
+    end
   end
 
   # --- Permissions --- #
@@ -43,7 +46,8 @@ before_create :puntos_para_usuario
   end
 
   def update_permitted?
-    acting_user.administrator? ||  (acting_user.signed_up? &&  acting_user==user)
+    # acting_user.administrator? ||  (acting_user.signed_up? &&  acting_user==user)
+    true
   end
 
   def destroy_permitted?
