@@ -18,6 +18,20 @@ class Libro < ActiveRecord::Base
   attr_accessible :autor, :editorial, :titulo, :curso, :edicion, :descripcion
 
 
+  lifecycle :state_field => "estado" do
+
+    state :disponible, :default => true
+    state :solicitado, :entregado, :recibido
+
+    transition :solicitar, { :disponible => :solicitado}, :available_to => :all
+
+
+    transition :enviar, {:solicitado => :entregado}, :available_to => :all
+
+
+    transition :confirmar, { :entregado=> :recibido}, :available_to => :all
+  end
+
   # --- Permissions --- #
 
   def create_permitted?
