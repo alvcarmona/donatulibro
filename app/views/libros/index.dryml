@@ -3,11 +3,23 @@
   <content-header: replace>
 
     <div class="hero-unit">
-      <a href="/libros/new" class="btn btn-primary pull-right">Añadir libro</a>
+      <a href="/libros/new" class="btn btn-primary btn-large pull-right">Ofrecer libro</a>
       <img width="150" vspace="3" hspace="3" height="150" border="2" align="middle" src="/assets/catalogo.png"/>
       <h1>Catálogo de libros</h1>
       <p>Usa las funciones de búsqueda para ver los libros actualmente disponibles</p>
     </div>
+
+    <form method="GET" action="/libros" class="form-inline well">
+      <input type="text" placeholder="Título" class="input" name="titulo" value="&params[:titulo]"/> 
+      <input type="text" placeholder="Autor" class="input" name="autor" value="&params[:autor]"/> 
+      <input type="text" placeholder="Editorial" class="input" name="editorial" value="&params[:editorial]"/>
+      <select name="estado">
+        <option value="disponible">Disponible</option>
+        <option value="reservado">Reservador</option>
+        <option value="entregado">Entregado</option>
+      </select>
+      <button class="btn" type="submit">Buscar</button>
+    </form>
   </content-header:>
 
 </index-page>

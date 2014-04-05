@@ -3,9 +3,9 @@ class Libro < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
-    autor       :string
+    autor       :string, :required
     editorial   :string
-    titulo      :string
+    titulo      :string, :required, :name => true
     curso       :string
     edicion     :string
     descripcion :string

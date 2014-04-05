@@ -1,0 +1,21 @@
+<show-page>
+  <content-header: replace>
+    <style>
+    .form-horizontal .control-label{text-align:left;}
+    </style>
+
+
+    <div class="hero-unit">
+      <div></div>
+      <a action="edit" if="&can_edit?" class="pull-right btn">
+        <ht key="libro.actions.edit" name="#{name(:no_wrapper => true)}">
+          Edit Libro
+        </ht>
+      </a>
+      <h1>Datos del libro</h1>
+
+      <div></div>
+    </div>
+
+  </content-header:>
+</show-page>
