@@ -1,0 +1,13 @@
+<index-page>
+
+  <content-header: replace>
+
+    <div class="hero-unit">
+      <a href="/libros/new" class="btn btn-primary pull-right">Añadir libro</a>
+      <img width="150" vspace="3" hspace="3" height="150" border="2" align="middle" src="/assets/catalogo.png"/>
+      <h1>Catálogo de libros</h1>
+      <p>Usa las funciones de búsqueda para ver los libros actualmente disponibles</p>
+    </div>
+  </content-header:>
+
+</index-page>
