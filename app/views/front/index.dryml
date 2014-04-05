@@ -2,29 +2,52 @@
 
   <body: class="front-page"/>
 
-  <content:>
-    <header class="content-header hero-unit">
-      <h1>Welcome to <app-name/></h1>
-      <section class="welcome-message">
-        <h3>Congratulations! Your Hobo Rails App is up and running</h3>
-        <ul>
-          <li>To customise this page: edit app/views/front/index.dryml</li>
-        </ul>
+  <content:><div class="container">
 
-        <% if User.count == 0 -%>
-          <h3 style="margin-top: 20px;">There are no user accounts - please provide the details of the site administrator</h3>
-          <form with="&this || User.new" without-cancel>
-            <field-list: fields="name, email_address, password, password_confirmation"/>
-            <submit: label="Register Administrator"/>
-          </form>
-        <% end -%>
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Bienvenido a Dona tu libro</h1>
+        <h2>&lsaquo; Dar. Recibir. Compartir &rsaquo; </h2>
+        <p>Esta pagina es una iniciativa creada en el hackathon de Bilbao para el HackForGood 2014 que permite a usuarios que no se conocen intercambiar libros, generalmente de texto, mediante Internet sin necesidad de pagar por ellos.</p>
+        <p><a href="#" class="btn btn-primary btn-large">Más información &raquo;</a></p>
+      </div>
+      <h2>Nuestra filosofía</h2>
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span4">
+          <img  align="center" src="/dar.png" WIDTH="300" HEIGHT="300" BORDER="2" />
+        </div>
+        <div class="span4">
+          <img  align="center" src="/recibir.png" WIDTH="300" HEIGHT="300" BORDER="2" />
+        </div>
+        <div class="span4">
+          <img  align="center" src="/compartir.png" WIDTH="300" HEIGHT="300" BORDER="2" />
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="span4">
+          <h2>¿Que es?</h2>
+          <p>Es un servicio/red social de intercambio de libros disponible para cualquier usuario que se registre en la web.</p>
+          <p><a class="btn" href="#">Más &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>¿Como funciona?</h2>
+          <p>Es muy sencillo! Te registras, añades los libros que tienes disponibles para intercambiar y buscas libros que te interesen.</p>
+          <p><a class="btn" href="#">Más &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2>Los puntos</h2>
+          <p>Que son? Buena pregunta! Por cada libro que tengas para compartir, recibiras puntos y por cada libro que pidas se te restarán puntos.</p>
+          <p><a class="btn" href="#">Más &raquo;</a></p>
+        </div>
+      </div>
 
-      </section>
-    </header>
+      <footer>
+        <p>&copy; Proyecto participante del HackforGood 2014 - Bilbao</p>
+      </footer>
 
-    <section class="content-body">
-    </section>
+    </div> <!-- /container -->
   </content:>
 
 </page>
