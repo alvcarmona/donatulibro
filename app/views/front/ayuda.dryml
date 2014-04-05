@@ -1,0 +1,47 @@
+<page title="Ayuda">
+
+  <body: class="Ayuda"/>
+
+  <content:>
+  <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Contenido</li>
+              <li class="active"><a href="/donatulibro">¿Qué es dona tu libro?</a></li>
+              <li><a href="/funcionamiento">¿Cómo funciona?</a></li>
+              <li><a href="/puntos">Sistema de puntos</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="hero-unit">
+            <h1>Ayuda</h1>
+            <p>Esta pagina ayudará a responder la mayoria de las dudas que puedes tener acerca de Dona tu libro: Este es un proyecto todavia en desarrollo que está en constante evolución</p>
+            
+          </div>
+          <div class="row-fluid">
+            <div class="span4">
+              <h2>¿Qué es dona tu libro?</h2>
+              <p><a class="btn" href="/donatulibro">Leer más &raquo;</a></p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2>Sistema de puntos</h2>
+              <p><a class="btn" href="/puntos">Leer más &raquo;</a></p>
+            </div><!--/span-->
+            <div class="span4">
+              <h2>¿Cómo funciona?</h2>
+            <p><a class="btn" href="/funcionamineto">Leer más &raquo;</a></p>
+            </div><!--/span-->
+          </div><!--/row-->
+            </div><!--/span-->
+          </div><!--/row-->
+        </div><!--/span-->
+      
+
+    <section class="Ayuda-body">
+    </section>
+  </content:>
+
+</page>
