@@ -12,6 +12,11 @@
           Edit Libro
         </ht>
       </a>
+      <div class= "pull-right">
+        <transition-buttons/>
+      </div>
+
+
       <h1>Datos del libro</h1>
 
       <div></div>

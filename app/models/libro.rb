@@ -16,7 +16,25 @@ class Libro < ActiveRecord::Base
   belongs_to :reservador, :class_name => "User" , :creator => true
  										
   attr_accessible :autor, :editorial, :titulo, :curso, :edicion, :descripcion
+before_create :puntos_para_usuario
 
+ def  puntos_para_usuario
+      self.user.update_attribute(:puntos,self.user.puntos+2)
+ end
+
+  lifecycle :state_field => "estado" do
+
+    state :disponible, :default => true
+    state :solicitado, :entregado, :recibido
+
+    transition :solicitar, { :disponible => :solicitado}, :available_to => :all
+
+
+    transition :enviar, {:solicitado => :entregado}, :available_to => :all
+
+
+    transition :confirmar, { :entregado=> :recibido}, :available_to => :all
+  end
 
   # --- Permissions --- #
 
