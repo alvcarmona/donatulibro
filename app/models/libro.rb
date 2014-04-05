@@ -13,21 +13,23 @@ class Libro < ActiveRecord::Base
   end
   
   belongs_to :user
-  belongs_to :reservador, :class_name => "User"
-  attr_accessible :autor, :editorial, :titulo, :curso, :edicion, :descripcion, :user, :reservador
+  belongs_to :reservador, :class_name => "User" , :creator => true
+ 										
+  attr_accessible :autor, :editorial, :titulo, :curso, :edicion, :descripcion
+
 
   # --- Permissions --- #
 
   def create_permitted?
-    acting_user.administrator?
+    acting_user.signed_up?
   end
 
   def update_permitted?
-    acting_user.administrator?
+    acting_user.administrator? ||  (acting_user.signed_up? &&  acting_user==user)
   end
 
   def destroy_permitted?
-    acting_user.administrator?
+    acting_user.administrator? ||  (acting_user.signed_up? &&  acting_user==user)
   end
 
   def view_permitted?(field)

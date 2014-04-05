@@ -9,7 +9,7 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Contenido</li>
-              <li class="active"><a href="/donatulibro">¿Qué es dona tu libro?</a></li>
+              <li class="active"><a href="#">¿Qué es dona tu libro?</a></li>
               <li><a href="/funcionamiento">¿Cómo funciona?</a></li>
               <li><a href="/puntos">Sistema de puntos</a></li>
             </ul>
@@ -24,15 +24,20 @@
           <div class="row-fluid">
             <div class="span4">
               <h2>¿Qué es dona tu libro?</h2>
-              <p><a class="btn" href="/donatulibro">Leer más &raquo;</a></p>
+              
+              <p>Dona tu libro es una plataforma online disponible para cualquer usuario registrado en la cual podrás compartir tus libros académicos, libros de texto..etc que no uses con otros usuarios sin coste alguno.Es una forma de accer accesible la educacion a quienes tengan dificultades econoómicas o simplemente quieran compartirlos.</p>
+            <p><a class="btn" href="#">Leer más &raquo;</a></p>
             </div><!--/span-->
             <div class="span4">
               <h2>Sistema de puntos</h2>
-              <p><a class="btn" href="/puntos">Leer más &raquo;</a></p>
+             <p>A través de este sistema de puntos el usuario recibirá puntos por los libros que comparta y podrá usar esos puntos obtenidos para solicitar la reserva de otros libros disponibles. Por cada libro añadido a la plataforma el usuario recibirá 2 puntos, por cada intercambio de libros    </p>
+              <p><a class="btn" href="#">Leer más &raquo;</a></p>
             </div><!--/span-->
             <div class="span4">
               <h2>¿Cómo funciona?</h2>
-            <p><a class="btn" href="/funcionamineto">Leer más &raquo;</a></p>
+             <p>Es muy sencillo, para empezar si no estás registrado deberás <a href="/users/signup">registrarte aqui</a>                        </p>
+
+            <p><a class="btn" href="#">Leer más &raquo;</a></p>
             </div><!--/span-->
           </div><!--/row-->
             </div><!--/span-->

@@ -30,12 +30,12 @@ class User < ActiveRecord::Base
 
   lifecycle do
 
-    state :inactive, :default => true
-    state :active
+    state :inactive
+    state :active , :default => true
 
     create :signup, :available_to => "Guest",
       :params => [:name, :email_address, :password, :password_confirmation, :movil, :direccion],
-      :become => :inactive, :new_key => true  do
+      :become => :active, :new_key => true  do
       UserMailer.activation(self, lifecycle.key).deliver
     end
 
