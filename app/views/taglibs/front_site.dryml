@@ -15,3 +15,35 @@
 <include src="taglibs/auto/rapid/forms"/>
 
 <include src="application"/>
+
+
+<extend tag="page">
+  <old-page merge>
+    <navbar: class="navbar-inverse"/>
+    <app-name:><a class="brand" href="/">Dona tu libro</a></app-name:>
+    <after-scripts:>
+      <link rel="shortcut icon" href="/assets/favicon.png"/>
+    </after-scripts:>
+
+    <account-nav:>
+      <search: replace>
+       
+      </search:>
+      <account: replace/>
+      <sign-up: replace/>
+    </account-nav:>
+    <footer:>
+      <div class="container">
+        Proyecto participante del HackforGood 2014 - Bilbao
+      </div>
+    </footer:>
+  </old-page>
+</extend>
+
+<def tag="main-nav">
+  <navigation class="main-nav" merge-attrs param="default">
+    <nav-item with="&Libro">Catálogo</nav-item>
+    <nav-item with="&Usuario">Mi cuenta</nav-item>
+    <nav-item href="/ayuda">Ayuda</nav-item>
+  </navigation>
+</def>
